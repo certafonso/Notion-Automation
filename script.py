@@ -53,7 +53,7 @@ def CopyBlock(original_block, dest_block):
         new_block.title = original_block.title
 
     # type has children
-    if type(original_block) in [block.ColumnBlock, block.ColumnListBlock, block.ToggleBlock]:
+    if type(original_block) in [block.ColumnBlock, block.ColumnListBlock, block.ToggleBlock, block.TodoBlock]:
         for child in original_block.children:
             CopyBlock(child, new_block)
 
